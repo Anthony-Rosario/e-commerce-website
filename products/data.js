@@ -1,6 +1,6 @@
 export const skateboards = [
     {
-        id: 'Bennett',
+        id: 'bennett',
         name: 'Bennett Emotional Baggage Deck',
         image: 'bennett-deck.webp',
         description: 'Size: 8.125" Wheelbase: 14"',
@@ -11,7 +11,7 @@ export const skateboards = [
     {
         id: 'Wimer',
         name: 'Past-Forms',
-        image: 'zer0-past-forms.webp',
+        image: 'zero-past-forms.webp',
         description: 'Size: 8.25" Wheelbase: 14.25"',
         category: 'skateboard',
         price: 59,
