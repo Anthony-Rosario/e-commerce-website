@@ -16,13 +16,20 @@ section {
     align-items: center;
 }
 
-li {
-    list-style: none;
+ul {
     justify-content: center;
     display: flex;
-    flex-direction: column;
-    max-width: 200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
 
+li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    max-width: 200px;
+    margin: 5rem;
 }
 
 p {
@@ -31,5 +38,12 @@ p {
 }
 
 button {
-
+   border: 1px solid black;
+   border-radius: 10px 10px;
+   background-color: crimson;
+   padding: 1em;
+   width: 150px;
+   justify-content: center;
+   justify-items: center;
+   margin: auto; 
 }

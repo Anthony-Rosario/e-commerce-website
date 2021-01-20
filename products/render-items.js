@@ -7,7 +7,7 @@ export function renderSkateboards(skateboards){
     li.append(h3);
 
     const img = document.createElement('img');
-    img.src = '../assets/bennett-deck.webp';
+    img.src = skateboards.image;
     li.append(img);
 
     const pDescription = document.createElement('p');

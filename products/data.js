@@ -2,7 +2,7 @@ export const skateboards = [
     {
         id: 'bennett',
         name: 'Bennett Emotional Baggage Deck',
-        image: 'bennett-deck.webp',
+        image: '../assets/bennett-deck.webp',
         description: 'Size: 8.125" Wheelbase: 14"',
         category: 'skateboard',
         price: 55,
@@ -11,7 +11,7 @@ export const skateboards = [
     {
         id: 'Wimer',
         name: 'Past-Forms',
-        image: 'zero-past-forms.webp',
+        image: '../assets/rd_zero-past-forms-wimer-deck_180x.png',
         description: 'Size: 8.25" Wheelbase: 14.25"',
         category: 'skateboard',
         price: 59,
@@ -20,7 +20,7 @@ export const skateboards = [
     {
         id: 'Delfino',
         name: 'Santa Cruz Delfino Tarot Card',
-        image: 'Santa-Cruz-deck.webp',
+        image: '../assets/Santa-Cruz-deck.webp',
         description: 'Size: 8.25" Wheelbase: 14"',
         category: 'skateboard',
         price: 65,
@@ -29,7 +29,7 @@ export const skateboards = [
     {
         id: 'Sector 9',
         name: 'Stranded Strand',
-        image: 'STRANDED-STRAND.png',
+        image: '../assets/STRANDED-STRAND.png',
         description: 'Components: 8.375” Gullwing Mission Trucks, ABEC 5 Greaseball Bearings',
         category: 'longboard',
         price: 189,
@@ -38,7 +38,7 @@ export const skateboards = [
     {
         id: 'Landyatchz',
         name: 'Landyatchz Totem Paradise',
-        image: 'Landyatchz-Totem-Paradise.webp',
+        image: '../assets/Landyatchz-Totem-Paradise.webp',
         description: 'Components: Hawgs 63mm 78a wheels, Bear Space Balls ABEC 7 Bearings',
         category: 'longboard',
         price: 179,
@@ -47,7 +47,7 @@ export const skateboards = [
     {
         id: 'DB',
         name: 'DB Longboards Pioneer',
-        image: 'DB-Longboards-Pioneer-deck.webp',
+        image: '../assets/DB-Longboards-Pioneer-deck.webp',
         description: 'Components: Cloud Ride Cruiser 69mm 78a wheels, Cloud Ride bearings',
         category: 'longboard',
         price: 189,

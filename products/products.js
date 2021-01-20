@@ -1,4 +1,4 @@
-import { renderSkateboards} from '../products/render-items.js';
+import { renderSkateboards } from '../products/render-items.js';
 import { skateboards } from '../products/data.js';
 
 const productsList = document.getElementById('product-list');

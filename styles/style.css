@@ -6,6 +6,10 @@ body {
     --footer-height: 25px;
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background-image: url('../assets/original-thrasher.gif');
+    background-repeat: no-repeat;  
+    background-position: 0% 0%;
+    background-size: 100% 100%;;
 }
 
 main {
@@ -45,4 +49,27 @@ header img {
 
 p {
     margin: var(--gutter);
+}
+
+button {
+    border: none;
+    background: #404040;
+    color: #ffffff;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    margin-top: 40rem;
+}
+
+button:hover {
+    color: #404040;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: none;
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0);
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0);
+    transition: all 0.3s ease 0s;
 }
