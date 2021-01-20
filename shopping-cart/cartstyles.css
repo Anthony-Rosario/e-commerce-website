@@ -1,0 +1,11 @@
+#header-icons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 1rem;
+    justify-content: space-evenly;
+    width: 500px;
+    
+    
+}
+
