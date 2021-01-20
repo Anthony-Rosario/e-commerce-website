@@ -29,7 +29,7 @@ export const skateboards = [
     {
         id: 'Sector 9',
         name: 'Stranded Strand',
-        image: '../assets/STRANDED-STRAND.png',
+        image: '../assets/STRANDED-STRAND-DECK-ANGLE_2048x.png',
         description: 'Components: 8.375” Gullwing Mission Trucks, ABEC 5 Greaseball Bearings',
         category: 'longboard',
         price: 189,

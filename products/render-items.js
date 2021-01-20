@@ -24,6 +24,7 @@ export function renderSkateboards(skateboards){
     
     const addButton = document.createElement('button');
     addButton.id = 'bennett-deck';
+    addButton.value = skateboards.code;
     addButton.textContent = 'Add To Cart';
     li.append(addButton);
     

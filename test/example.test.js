@@ -15,7 +15,7 @@ test('time to test a function', (expect) => {
 
     const actual = renderSkateboards(boardTest).outerHTML;
 
-    const expected = `<li id="product-list"><h3>Bennett Emotional Baggage Deck</h3><img src="../assets/bennett-deck.webp"><p>Size: 8.125" Wheelbase: 14"</p><p>skateboard</p><p>$55</p><button id="bennett-deck">Add To Cart</button></li>`;
+    const expected = `<li id="product-list"><h3>Bennett Emotional Baggage Deck</h3><img src="bennett-deck.webp"><p>Size: 8.125" Wheelbase: 14"</p><p>skateboard</p><p>$55</p><button id="bennett-deck" value="undefined">Add To Cart</button></li>`;
 
     expect.equal(actual, expected);
 });
