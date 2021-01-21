@@ -1,0 +1,22 @@
+body { 
+    background-color: white;
+}
+
+table {
+    margin-top: 200px;
+    border: 1px solid black;
+    border-spacing: 0px;
+    margin-left: 45rem;
+}
+
+tr {
+    border: 1px solid black;
+
+}
+
+td, th {
+    text-align: center;
+    padding: 3px;
+    border: 1px solid black;
+    margin: -10px;
+}
