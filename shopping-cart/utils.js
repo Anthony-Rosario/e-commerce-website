@@ -8,10 +8,17 @@ export function findById(array, id) {
 
 
 export function calcLineItem(quantity, amount) {
-    const total = quantity * amount;
-    return Math.round(total * 100) / 100;
+    return quantity * amount;
 }
 
 
+export function calculateTotal(cart, skateboards) {
+    let total = 0;
 
-
+    for (const cartItem of cart) {
+        let boardPrice = findById(skateboards, cartItem.id).price;
+        let cartItemPrice = calcLineItem(cartItem.quantity, boardPrice);
+        total += cartItemPrice;
+    }
+    return total;
+}

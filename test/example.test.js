@@ -1,6 +1,8 @@
 import { renderSkateboards } from '../products/render-items.js';
-import { findById, calcLineItem } from '../shopping-cart/utils.js';
+import { findById, calcLineItem, calculateTotal } from '../shopping-cart/utils.js';
 import { renderCartTable } from '../shopping-cart/render-line-items.js';
+import { skateboards } from '../data/data.js';
+import { cartSkateboards } from '../shopping-cart/cart.js';
 
 
 const test = QUnit.test;
@@ -94,3 +96,14 @@ test('function should generate a table row based on the items the user puts in t
 
     expect.equal(actual.outerHTML, expected);
 });
+
+
+
+test('given a cart arr and garment arr, return order total for cart', (expect) => {
+    const expected = 484;
+
+    const actual = calculateTotal(cartSkateboards, skateboards);
+    
+    expect.equal(actual, expected);
+
+})

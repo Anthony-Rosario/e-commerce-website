@@ -12,10 +12,10 @@ export function renderCartTable(cartItem) {
 
     
     const skateboardItem = findById(skateboards, cartItem.id);
-    console.log(skateboardItem);
+    
     const itemName = skateboardItem.name;
     itemTd.textContent = itemName;
-    console.log(itemName);
+    
     const price = skateboardItem.price;
     priceTd.textContent = `$${price}`;
     
