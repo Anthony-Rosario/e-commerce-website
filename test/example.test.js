@@ -106,4 +106,5 @@ test('given a cart arr and garment arr, return order total for cart', (expect) =
     
     expect.equal(actual, expected);
 
-})
+});
+
