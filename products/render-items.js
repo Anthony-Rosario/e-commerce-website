@@ -27,11 +27,11 @@ export function renderSkateboards(skateboards){
     pPrice.textContent = `$${skateboards.price}`;
     li.append(pPrice);
 
-    const quantityInput = document.createElement('input');
-    quantityInput.type = 'number';
-    quantityInput.min = 1;
-    quantityInput.placeholder = 'quantity: 1';
-    li.append(quantityInput);
+    // const quantityInput = document.createElement('input');
+    // quantityInput.type = 'number';
+    // quantityInput.min = 1;
+    // quantityInput.placeholder = 'quantity: 1';
+    // li.append(quantityInput);
     
     const buttonAdd = document.createElement('button');
     buttonAdd.id = skateboards.id;

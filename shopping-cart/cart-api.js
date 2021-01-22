@@ -1,5 +1,5 @@
-const CART = 'CART';
-const emptyCart = [];
+export const CART = 'CART';
+export const emptyCart = [];
 import { findById } from '../utils.js';
 
 
@@ -42,7 +42,8 @@ export function setCart(cart) {
 
 
 export function clearCart() {
-    localStorage.removeItem;
+    const mockCart = JSON.stringify(emptyCart);
+    localStorage.removeItem(CART, mockCart);
 }
 
 

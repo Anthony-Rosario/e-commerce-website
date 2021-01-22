@@ -1,9 +1,9 @@
 import { renderSkateboards } from '../products/render-items.js';
-import { findById, calcLineItem, calculateTotal } from '../shopping-cart/utils.js';
-import { renderCartTable } from '../shopping-cart/render-line-items.js';
+import { findById, calcLineItem, calculateTotal } from '../utils.js';
+import { renderCartTable } from '../shopping-cart/cart-utils.js';
 import { skateboards } from '../data/data.js';
-import { cartSkateboards } from '../shopping-cart/cart.js';
-import { getCart } from '../shopping-cart/cart-api.js';
+import { cartSkateboards } from '../data/cart.js';
+import { getCart, setCart, clearCart } from '../shopping-cart/cart-api.js';
 
 
 const test = QUnit.test;
@@ -111,14 +111,33 @@ test('given a cart arr and garment arr, return order total for cart', (expect) =
 
 
 
-test('function should take a key and return a value', (expect) => {
-    const expected = JSON.parse(localStorage.getItem('testCart'));
+test('getCart should get the correct cart from local storage', (expect) => {
+    const testCart = [
+        { 
+            id: 3,
+            quantity: 2
+        },
+        { 
+            id: 4,
+            quantity: 1
+        },
+    ];
+    const stringyCart = JSON.stringify(testCart);
 
-    const actual = getCart('testCart');
+    localStorage.setItem('CART', stringyCart);
+    
+    const cart = getCart();
 
-    const expected2 = [];
-    const actual2 = getCart('bagel');
+    expect.deepEqual(cart, testCart);
+});
+
+
+
+test('clearCart should remove the items that the user put in the cart', (expect) => {
+    localStorage.setItem('CART', JSON.stringify('barnacle'));
+    clearCart();
+    const expected = getCart();
+    const actual = '[]';
 
     expect.deepEqual(actual, expected);
-    expect.deepEqual(actual2, expected2);
-});
+})
