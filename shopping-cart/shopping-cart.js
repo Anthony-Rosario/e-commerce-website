@@ -49,6 +49,7 @@ const button2 = document.querySelector('#clear-cart');
 
 button2.addEventListener('click', () => {
     clearCart();
+    location.reload();
 });
 
 

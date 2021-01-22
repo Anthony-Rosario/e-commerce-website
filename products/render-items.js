@@ -38,7 +38,8 @@ export function renderSkateboards(skateboards){
     li.append(buttonAdd);
 
     buttonAdd.addEventListener('click', () => {
-        addToCart(skateboards.id);
+        const addQuantity = quantityInput.valueAsNumber;
+        addToCart(skateboards.id, addQuantity);
     });
     
     return li;
