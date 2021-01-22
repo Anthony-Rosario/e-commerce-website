@@ -1,5 +1,4 @@
 import { skateboards } from '../data/data.js';
-// import { cartSkateboards } from '../data/cart.js';
 import { renderCartTable } from './cart-utils.js';
 import { findById, calculateTotal } from '../utils.js';
 import { clearCart, getCart } from '../shopping-cart/cart-api.js';
@@ -50,6 +49,7 @@ const button2 = document.querySelector('#clear-cart');
 
 button2.addEventListener('click', () => {
     clearCart();
+    location.reload();
 });
 
 

@@ -1,6 +1,6 @@
+import { findById } from '../utils.js';
 export const CART = 'CART';
 export const emptyCart = [];
-import { findById } from '../utils.js';
 
 
 
@@ -19,16 +19,17 @@ export function getCart() {
     }
 }
 
-export function addToCart(id) {
+export function addToCart(id, input) {
     const cart = getCart();
     const cartItem = findById(cart, id);
-
+    const addQuantity = input;
+    
     if (cartItem) {
-        cartItem.quantity++;
-    } else {
+        cartItem.quantity += addQuantity;
+    } else if (addQuantity > 0) {
         const newItem = {
             id: id,
-            quantity: 1
+            quantity: addQuantity
         };
         cart.push(newItem);
     }

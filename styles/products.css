@@ -66,6 +66,12 @@ section {
     align-items: center;
 }
 
+input {
+    width: 98px;
+    margin-left: 15em;
+    margin-bottom: ;
+}
+
 ul {
     justify-content: center;
     display: flex;
