@@ -8,6 +8,17 @@ import { getCart, setCart, clearCart } from '../shopping-cart/cart-api.js';
 
 const test = QUnit.test;
 
+const testCart = [
+    {
+        id: 'bennet', 
+        quantity: 2
+    },
+    {
+        id: 'Wimer',
+        quantity: 2
+    }
+];
+
 test('time to test a function', (expect) => {
     const boardTest = {
         id: 'bennett',
@@ -21,7 +32,7 @@ test('time to test a function', (expect) => {
 
     const actual = renderSkateboards(boardTest).outerHTML;
 
-    const expected = `<li id="product-list"><h3>Bennett Emotional Baggage Deck</h3><img src="../assets/bennett-deck.webp"><p>Size: 8.125" Wheelbase: 14"</p><p>skateboard</p><p>$55</p><button id="bennett" value="undefined">Add To Cart</button></li>`;
+    const expected = '<li id="product-list"><h3>Bennett Emotional Baggage Deck</h3><img src="../assets/bennett-deck.webp"><p>Size: 8.125" Wheelbase: 14"</p><p>skateboard</p><p>$55</p><input type="number" min="1" placeholder="quantity: 1"><button id="bennett" value="undefined">Add To Cart</button></li>';
 
     expect.equal(actual, expected);
 });
@@ -140,4 +151,12 @@ test('clearCart should remove the items that the user put in the cart', (expect)
     const actual = '[]';
 
     expect.deepEqual(actual, expected);
+});
+
+
+test('setCart should place whatever is in the cart into localstorage', (expect) => {
+    setCart(testCart);
+    const actual = getCart();
+
+    expect.deepEqual(testCart, actual);
 })
