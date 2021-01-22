@@ -3,6 +3,7 @@ import { findById, calcLineItem, calculateTotal } from '../shopping-cart/utils.j
 import { renderCartTable } from '../shopping-cart/render-line-items.js';
 import { skateboards } from '../data/data.js';
 import { cartSkateboards } from '../shopping-cart/cart.js';
+import { getCart } from '../shopping-cart/cart-api.js';
 
 
 const test = QUnit.test;
@@ -108,3 +109,16 @@ test('given a cart arr and garment arr, return order total for cart', (expect) =
 
 });
 
+
+
+test('function should take a key and return a value', (expect) => {
+    const expected = JSON.parse(localStorage.getItem('testCart'));
+
+    const actual = getCart('testCart');
+
+    const expected2 = [];
+    const actual2 = getCart('bagel');
+
+    expect.deepEqual(actual, expected);
+    expect.deepEqual(actual2, expected2);
+});

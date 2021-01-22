@@ -1,3 +1,8 @@
+import { addToCart } from '../shopping-cart/cart-api.js';
+// import { putLocalStorage, pullFromLocStorage, findById } from '../shopping-cart/utils.js';
+// import { getCart, setCart } from '../shopping-cart/cart-api.js';
+
+
 export function renderSkateboards(skateboards){
     const li = document.createElement('li');
     li.id = 'product-list';
@@ -21,12 +26,38 @@ export function renderSkateboards(skateboards){
     const pPrice = document.createElement('p');
     pPrice.textContent = `$${skateboards.price}`;
     li.append(pPrice);
+
+    const quantityInput = document.createElement('input');
+    quantityInput.type = 'number';
+    quantityInput.min = 1;
+    quantityInput.placeholder = 'quantity: 1';
+    li.append(quantityInput);
     
-    const addButton = document.createElement('button');
-    addButton.id = skateboards.id;
-    addButton.value = skateboards.code;
-    addButton.textContent = 'Add To Cart';
-    li.append(addButton);
+    const buttonAdd = document.createElement('button');
+    buttonAdd.id = skateboards.id;
+    buttonAdd.value = skateboards.code;
+    buttonAdd.textContent = 'Add To Cart';
+    li.append(buttonAdd);
+
+    buttonAdd.addEventListener('click', () => {
+        addToCart(skateboards.id);
+    });
     
     return li;
 }
+
+
+// export function incrementQuantity() {
+//     const quantArray = [];
+//     const skateboards = pullFromLocStorage('PRODUCTS');
+
+//     for (let i = 0; i < skateboards.length; i++) {
+//         const currQuantity = {
+//             id: skateboards[i].id,
+//             quantity: Number(1)
+//         };
+//         quantArray.push(currQuantity);
+//     }
+//     putLocalStorage('quantity', quantArray);
+// }
+

@@ -7,8 +7,18 @@ export function findById(array, id) {
 }
 
 
-export function calcLineItem(quantity, amount) {
-    return quantity * amount;
+export function pullFromLocStorage(key) {
+    
+    return JSON.parse(localStorage.getItem(key));
+
+}
+
+
+
+export function putLocalStorage(key, value) {
+    
+    localStorage.setItem(key, JSON.stringify(value));
+
 }
 
 
@@ -22,3 +32,9 @@ export function calculateTotal(cart, skateboards) {
     }
     return total;
 }
+
+
+export function calcLineItem(quantity, amount) {
+    return quantity * amount;
+}
+

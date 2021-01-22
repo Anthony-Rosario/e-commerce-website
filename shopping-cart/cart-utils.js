@@ -1,4 +1,4 @@
-import { findById } from '../shopping-cart/utils.js';
+import { findById } from '../utils.js';
 import { skateboards } from '../data/data.js';
 
 
@@ -29,3 +29,7 @@ export function renderCartTable(cartItem) {
     return tr;
     
 }
+
+
+
+
