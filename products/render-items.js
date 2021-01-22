@@ -1,6 +1,4 @@
 import { addToCart } from '../shopping-cart/cart-api.js';
-// import { putLocalStorage, pullFromLocStorage, findById } from '../utils.js';
-// import { getCart, setCart } from '../shopping-cart/cart-api.js';
 
 
 export function renderSkateboards(skateboards){
@@ -45,19 +43,3 @@ export function renderSkateboards(skateboards){
     
     return li;
 }
-
-
-// export function incrementQuantity() {
-//     const quantArray = [];
-//     const skateboards = pullFromLocStorage('PRODUCTS');
-
-//     for (let i = 0; i < skateboards.length; i++) {
-//         const currQuantity = {
-//             id: skateboards[i].id,
-//             quantity: Number(1)
-//         };
-//         quantArray.push(currQuantity);
-//     }
-//     putLocalStorage('quantity', quantArray);
-// }
-
