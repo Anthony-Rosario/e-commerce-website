@@ -159,4 +159,4 @@ test('setCart should place whatever is in the cart into localstorage', (expect) 
     const actual = getCart();
 
     expect.deepEqual(testCart, actual);
-})
+});
